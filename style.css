@@ -1,0 +1,181 @@
+/****************************************************************
+* Default Webpage Style
+*****************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+body {
+    color: #777;
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+    margin: auto;
+  }
+
+
+
+/****************************************************************
+* Navbar
+*****************************************************************/
+nav {
+    background-color: black;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a{
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 5% 2%;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+
+/****************************************************************
+* Grid Container
+*****************************************************************/
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+/****************************************************************
+* image1 *** my picture
+*****************************************************************/
+
+.image1-grid-item {
+    border-radius: 8px;
+    justify-self: center;
+}
+
+.image1-grid-item > img {
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/****************************************************************
+* myname
+*****************************************************************/
+
+.myname-grid-item {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    justify-self: center;
+}
+
+
+/****************************************************************
+* about
+*****************************************************************/
+
+.about-grid-item {
+    margin: 2%;
+}
+
+/****************************************************************
+* services
+*****************************************************************/
+
+.services-grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.services-grid-heading {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    
+}
+
+.services-grid-item1 {
+    align-self: center;
+    max-width: 256px;
+    justify-self: center;
+
+}
+
+.services-grid-item1 >img {
+    height: auto;
+    width: 100%;
+}
+
+.services-grid-item2 {
+    align-self: center;
+    max-width: 256px;
+    justify-self: center;
+}
+
+.services-grid-item2 > img {
+    height: auto;
+    max-width: 100%;
+}
+
+/****************************************************************
+* Contact
+*****************************************************************/
+.contact {
+    margin: 35px 0px;
+    text-align: center;
+}
+
+.contact-button {
+    border-radius: 10px;
+    padding: 25px 25px;
+}
+
+/****************************************************************
+* footer
+*****************************************************************/
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/****************************************************************
+* Tablets and bigger
+*****************************************************************/
+@media screen and (min-width: 800px) {
+    .image1-grid-container {
+        /* background: rgb(33,198,255);
+        background: linear-gradient(90deg, rgba(33,198,255,0.28138279036827196) 0%, rgba(201,246,255,1) 100%); */
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    .image1-grid-item{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    /* .image1-grid-item > img{
+        
+    } */
+
+    .myname-grid-item{
+       font-size: 2em;
+    }
+
+    .about-grid-item{
+        grid-row-start: 2;
+        grid-row-end: 3;
+         
+    }
+  }
